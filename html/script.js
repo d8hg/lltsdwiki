@@ -1,31 +1,4 @@
-(function() {
-  // منع زر F12 واختصارات الفحص وعرض المصدر
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'F12' || e.keyCode === 123) {
-      e.preventDefault();
-      return false;
-    }
-    if (e.ctrlKey && e.key.toLowerCase() === 'u') {
-      e.preventDefault();
-      return false;
-    }
-    if (e.ctrlKey && e.shiftKey && ['i', 'j', 'c'].includes(e.key.toLowerCase())) {
-      e.preventDefault();
-      return false;
-    }
-    if (e.ctrlKey && e.key.toLowerCase() === 's') {
-      e.preventDefault();
-      return false;
-    }
-  });
-
-  // منع كليك يمين
-  document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-  });
-
-  // === كود الموقع الأصلي ===
-  var D=[
+ var D=[
    {n:'الضبان',t:'الضب سحلية صحراوية تحفر جحرها وتأكل النبات. هنا تعرف كل نوع وكم ندرته قبل لا تطلع الصيد.',c:['جميع الأنواع','الندرة','السعر','الوزن','مكان الظهور'],dabs:1},
    {n:'السيارات',t:'اختر سيارتك وأنت عارف وش تدفع وش تاخذ.',c:['السعر','الحوض','أكبر ضب يدخل','المستوى'],cars:1},
    {n:'الأسلحة',t:'تعرف كم سعر كل سلاح وكيف تحصل عليه.',c:['جميع الأنواع','السعر','شروط الحصول'],weapons:1},
